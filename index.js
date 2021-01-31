@@ -212,7 +212,7 @@ if (isDevelopment) {
 
 let PEER_PORT;
 
-if (process.env.GENERATE_PEER_PORT === "true") {
+if (process.env.GENERATE_PEER_PORT === 'true') {
   PEER_PORT = DEFAULT_PORT + Math.ceil(Math.random() * 1000);
 }
 

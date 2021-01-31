@@ -53,8 +53,8 @@ a,
 a:hover {
   position: relative;
   z-index: 400;
-  color: rgb(22, 90, 145);
-  box-shadow: 0px 0px 5px 5px #b31b1b;
+  color: rgb(42, 143, 12);
+  box-shadow: 0px 0px 5px 5px #e6f1f1;
   text-decoration: none;
 }
 
