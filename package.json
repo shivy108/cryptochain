@@ -13,7 +13,6 @@
     "dev-client": "npm run clean && parcel client/src/index.html --out-dir client/dist",
     "clean": "rm -rf .cache client/dist",
     "heroku-postbuild": "npm run build-client "
-
   },
   "jest": {
     "testEnvironment": "node"
@@ -46,5 +45,8 @@
     "request": "^2.88.0",
     "serve": "^11.3.2",
     "uuid": "^3.3.2"
+  },
+  "engines": {
+    "node": "15.7.0"
   }
 }
