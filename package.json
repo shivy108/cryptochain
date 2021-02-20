@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",
-    "start": "npm run build-client & node index.js",
+    "start": "npm run build-client & serve -s index.js",
     "dev": "npm run dev-client & npm run start-redis && cross-env ENV='development' nodemon index.js",
     "dev-peer": "cross-env GENERATE_PEER_PORT='true' ENV='development' nodemon index.js",
     "start-redis": "redis-server --daemonize yes",
     "build-client": "npm run clean && parcel build client/src/index.html --out-dir client/dist",
     "dev-client": "npm run clean && parcel client/src/index.html --out-dir client/dist",
-    "clean": "rm -rf .cache client/dist"
+    "clean": "rm -rf .cache client/dist",
+    "heroku-postbuild": "npm run build"
+
   },
   "jest": {
     "testEnvironment": "node"
@@ -42,6 +44,7 @@
     "react-router-dom": "^4.3.1",
     "redis": "^2.8.0",
     "request": "^2.88.0",
+    "serve": "^11.3.2",
     "uuid": "^3.3.2"
   }
 }
