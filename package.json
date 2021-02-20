@@ -12,7 +12,7 @@
     "build-client": "npm run clean && parcel build client/src/index.html --out-dir client/dist",
     "dev-client": "npm run clean && parcel client/src/index.html --out-dir client/dist",
     "clean": "rm -rf .cache client/dist",
-    "heroku-postbuild": "npm run build-client & npm start-redis "
+    "heroku-postbuild": "npm run build-client && npm run start-redis "
 
   },
   "jest": {
